@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contact Form</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="./form.css" >
+    </head>
+    <body >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 " id="form_container">
+                    <h2>Contact Us</h2> 
+                    <p> Please send your message below. We will get back to you at the earliest! </p>
+                    <form id="reused_form">
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <label for="message"> Message:</label>
+                                <textarea class="form-control" type="textarea" id="message" name="message" maxlength="6000" rows="7"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label for="name"> Your Name:</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label for="email"> Email:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <button type="submit" class="btn btn-lg btn-default pull-right" >Send &rarr;</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyA5GsCHY9dTlP6PzADs3PrmW6g28ZaF0XQ",
+    authDomain: "se-project-1df46.firebaseapp.com",
+    databaseURL: "https://se-project-1df46.firebaseio.com",
+    projectId: "se-project-1df46",
+    storageBucket: "se-project-1df46.appspot.com",
+    messagingSenderId: "389570045157",
+    appId: "1:389570045157:web:ccde163eea94b52ff9a00c",
+    measurementId: "G-4FTVM9QFHG"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+    <script src="./form.js"></script>
+    </body>
+</html>

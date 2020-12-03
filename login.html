@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Login/Registration Form Transition</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'><link rel="stylesheet" href="./login.css">
+
+</head>
+<body>
+<div class="cont">
+  <div class="form sign-in">
+    <h2>Welcome back,</h2>
+    <label>
+      <span>Email</span>
+      <input type="email" id="login_email"/>
+    </label>
+    <label>
+      <span>Password</span>
+      <input type="password" id="login_password" />
+    </label>
+    <p class="forgot-pass">Forgot password?</p>
+    <button type="button" onclick="User_login()" class="submit">Sign In</button>
+  </div>
+  <div class="sub-cont">
+    <div class="img">
+      <div class="img__text m--up">
+        <h2>New here?</h2>
+        <p>Sign up and discover great amount of new opportunities!</p>
+      </div>
+      <div class="img__text m--in">
+        <h2>One of us?</h2>
+        <p>If you already has an account, just sign in. We've missed you!</p>
+      </div>
+      <div class="img__btn">
+        <span class="m--up">Sign Up</span>
+        <span class="m--in">Sign In</span>
+      </div>
+    </div>
+    <div class="form sign-up">
+      <h2>Time to feel like home,</h2>
+      <label>
+        <span>Name</span>
+        <input type="text" />
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="email" id="register_email" />
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" id="register_password" />
+      </label>
+      <button type="button" onclick="RegisterUser()" class="submit">Sign Up</button>
+    </div>
+  </div>
+</div>
+
+<a href="https://twitter.com/_BaffledCoder" target="_blank" class="icon-link icon-link--twitter">
+  <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png">
+</a>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyA5GsCHY9dTlP6PzADs3PrmW6g28ZaF0XQ",
+    authDomain: "se-project-1df46.firebaseapp.com",
+    databaseURL: "https://se-project-1df46.firebaseio.com",
+    projectId: "se-project-1df46",
+    storageBucket: "se-project-1df46.appspot.com",
+    messagingSenderId: "389570045157",
+    appId: "1:389570045157:web:ccde163eea94b52ff9a00c",
+    measurementId: "G-4FTVM9QFHG"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script>
+  function RegisterUser() {
+  var email=document.getElementById('register_email').value;
+  var password=document.getElementById('register_password').value;
+  firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
+    alert("You have been logged in. ");
+  window.location.replace("./index.html");
+})
+  .catch(function(error) {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    window.alert("Error : " + errorMessage);
+    });
+}
+function User_login(){
+  console.log("text");
+  var userEmail = document.getElementById("login_email").value;
+  var userPass = document.getElementById("login_password").value;
+
+  firebase.auth().signInWithEmailAndPassword(userEmail, userPass).then(function() {
+
+  alert("You have been logged in. ");
+  window.location.replace("./index.html");
+}).catch(function(error) {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+
+    window.alert("Error : " + errorMessage);
+
+    // ...
+  });
+}
+</script>
+<script  src="./login.js"></script>
+
+</body>
+</html>

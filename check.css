@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+#set{
+	position: fixed;
+    right: 0;
+  	background: rgba(0, 0, 0, 0.5);
+  	color: #f1f1f1;
+  	min-width: 100%;
+    min-height: 100%;
+  	padding: 20px;
+
+}
+#bet{
+	text-align:center;
+	color:white;
+	padding:20px;
+	margin:20px;
+}
+#jet{
+	text-align:center;
+	color:white;
+	margin:20px;
+}
+
+#get{
+	text-align:center;
+	color:white;
+	
+}
+#set2{
+	text-align:center;
+	margin-top:100px;
+}
+#result{
+	text-align:center;
+	white-space: pre-line;
+	color:black;
+	font-size: 20px;
+	margin: auto;
+	justify-content: center;
+	float: left;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}

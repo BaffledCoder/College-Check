@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> college check</title>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="stylesheet" href="./check.css">
+</head>
+<body>
+<div>
+<video autoplay muted loop id="myVideo">
+  		<source src="./upload/preview.mp4" type="video/mp4">
+</video>
+</div>
+<div id="set">
+	<h1 id="bet"> Check Your Potential Colleges </h1>
+	<div id="jet">
+		<label for="name" id="get"> <strong> Name &nbsp; &nbsp;</strong> </label>
+		<input type="text" id="name">
+	</div>
+	<div id="jet">
+    	<label for="marks" id="get" > <strong> C.G.P.A   </strong> </label>
+		<input type="number" id="marks">
+	</div>
+	<div id="jet"><button type="button" onclick="check()"> <strong>Click Here</strong> </button></div>
+	<br><br>
+	<div id="jet"><strong id="result" ></strong></div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyA5GsCHY9dTlP6PzADs3PrmW6g28ZaF0XQ",
+    authDomain: "se-project-1df46.firebaseapp.com",
+    databaseURL: "https://se-project-1df46.firebaseio.com",
+    projectId: "se-project-1df46",
+    storageBucket: "se-project-1df46.appspot.com",
+    messagingSenderId: "389570045157",
+    appId: "1:389570045157:web:ccde163eea94b52ff9a00c",
+    measurementId: "G-4FTVM9QFHG"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>    
+<script src="./check.js"></script>
+</body>
+</html>
