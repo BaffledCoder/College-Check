@@ -1,5 +1,5 @@
 # College Check
-It can provide services for students and organization.
+It provides services for students and organization.
 For student most important feature of College Check is that it provides you with list of colleges which has the highest probability for taking you in.  
 For organization we can help them by assisting them with recruitment.  
 I used Firebase as database.  
